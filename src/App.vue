@@ -1,8 +1,10 @@
 <script >
 import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
  export default {
    components:{
-     TheHeader: TheHeader
+     TheHeader: TheHeader,
+     TheFooter: TheFooter
    }
  }
 </script>
@@ -10,6 +12,7 @@ import TheHeader from "./components/TheHeader.vue";
 <template>
   <div>
     <TheHeader/>
+    <TheFooter/>
   </div>
 </template>
 
