@@ -2,20 +2,19 @@
   <Layout>
 
 
-    <h1>Hello, welcome to {{ $static.metadata.siteName }} </h1>
+    <h1>Hello, welcome to {{ $static.metadata.siteName }}, we explain stuff with memes and code </h1>
     <hr>
-    <h2>Posts</h2>
     <div class="post"
       v-for="post in $page.posts.edges"
       :key="post.id"
       
     >
-      <g-link :to="post.node.path">
+      <!-- <g-link :to="post.node.path">
         <h3><b> {{post.node.title}} </b></h3>
       </g-link>
         
-        <p> {{post.node.date}} </p>
-      
+        <p> {{post.node.date}} </p> -->
+      <PostPreview :title="post.node.title" :date="post.node.date" :path="post.node.path" />
 
     </div>
 

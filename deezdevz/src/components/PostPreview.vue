@@ -3,16 +3,17 @@
 export default {
     props:{
         title: String,
-        date: String
+        date: String,
+        path: String
     }
 }
 </script>
 
 <template>
-    <div>
+    <g-link :to="this.path">
         <h1>{{this.title}}</h1>
         <p>{{this.date}}</p>
-    </div>
+    </g-link>
 </template>
 
 <style scoped>
