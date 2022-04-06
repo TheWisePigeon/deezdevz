@@ -1,10 +1,10 @@
 
 <script>
 export default {
-    props:[
-        title,
-        date
-    ]
+    props:{
+        title: String,
+        date: String
+    }
 }
 </script>
 
