@@ -9,11 +9,11 @@ module.exports = {
   plugins: [{
     use: "@gridsome/source-filesystem",
     options: {
-      typeName: "BlogPost",
+      typeName: "Post",
       path: "./post/**/*.md",
     }
   }],
   templates: {
-    BlogPost: "/post/:title",
+    Post: "/post/:title",
   }
 }
