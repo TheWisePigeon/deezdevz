@@ -5,19 +5,17 @@ export default {
     title: String,
     date: String,
     path: String,
-    readingTime: String,
+    readingTime: Number,
+    tags: String
   },
 };
 </script>
 
 <template>
-  <div class=" border border-purple-400 rounded my-4 shadow-md shadow-white">
+  <div class=" border border-purple-400 rounded my-4 shadow-md shadow-white p-4">
     <g-link :to="this.path">
-      <h1>{{ this.title }}</h1>
-      <p>{{ this.date }}</p>
+      <p class=" text-2xl font-bold" >{{ this.title }}</p>
+      <p>{{ this.date }} . {{ this.readingTime }} . {{ this.tags }} </p>
     </g-link>
   </div>
 </template>
-
-<style scoped>
-</style>

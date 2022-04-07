@@ -20,6 +20,9 @@ query {
 
 <script>
 export default {
+  metaInfo:{
+    titleTemplate: 'DeezDevz - %s'
+  },
   data(){
     return{
       height: '90px'

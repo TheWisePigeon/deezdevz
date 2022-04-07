@@ -1,3 +1,15 @@
+<script>
+export default {
+	name: 'Post name',
+	metaInfo(){
+		return{
+			title: this.$page.post.title,
+
+		}
+	}
+}
+</script>
+
 <template>
 	<Layout>
 		<header class="title">
@@ -12,7 +24,9 @@
 	query Post($path: String!) {
 		post: post(path: $path) {
 			id 
-			title 
+			title
+			readingTime 
+			tags
 			path 
 			date (format: "MMMM D, YYYY h:mma") 
 			content
