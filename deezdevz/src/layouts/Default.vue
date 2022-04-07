@@ -1,9 +1,14 @@
 <template class=" bg-slate-900" >
-  <div class="layout w-auto p-4 font-mono ">
+  <div class="layout w-auto p-4 font-mono">
     <header class="flex justify-between py-6">
-      <g-link class=" text-3xl" to="/">{{ $static.metadata.siteName }}</g-link>
-      <div>
-        <button class=" bg-purple-500 rounded px-3">Switch</button>
+      <g-link class="text-3xl" to="/">{{ $static.metadata.siteName }}</g-link>
+      <div class="flex items-center">
+        <div v-if="this.theme === 'Dark'">
+          <DarkTheme />
+        </div>
+        <div v-else>
+          <LightTheme />
+        </div>
       </div>
     </header>
     <slot />
@@ -20,37 +25,33 @@ query {
 
 <script>
 export default {
-  metaInfo:{
-    titleTemplate: 'DeezDevz - %s'
+  metaInfo: {
+    titleTemplate: "DeezDevz - %s",
   },
-  data(){
-    return{
-      
+  data() {
+    return {
+      theme
+    };
+  },
+  beforeMount() {
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.body.classList.add("bg-slate-900");
+      document.body.classList.add("text-white");
+    } else {
+      document.body.classList.add("bg-white");
     }
   },
-  computed:{
-    theme(){
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
-    }
+  methods: {
+    changeTheme() {
+      if (this.theme === "Dark") {
+        this.theme = "Light"
+      } 
+      if (this.theme==="Light") {
+        this.theme = "Dark"
+      }
+    },
   },
-  mounted(){
-    if (this.theme==='Dark') {
-      document.body.classList.add('bg-slate-900')
-      document.body.classList.add('text-white')
-    }else{
-      document.body.classList.add('bg-white')
-      
-    }
-
-  },
-  methods:{
-    changeTheme(){
-      if (this.theme==='Dark') {
-        
-      }      
-    }
-  }
-}
+};
 </script>
 
 <style>
@@ -75,7 +76,7 @@ body {
   height: 80px;
 }
 
-.test{
+.test {
   background-color: slateblue;
 }
 
