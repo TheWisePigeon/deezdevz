@@ -1,11 +1,9 @@
-<template>
-  <div class="layout">
-    <header class="header bg-slate-900">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
+<template  >
+  <div class="layout w-auto p-4 ">
+    <header class="flex justify-between ">
+      <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       <div>
-        bruh
+        <button class=" bg-purple-500 rounded px-3">Switch</button>
       </div>
     </header>
     <slot />
@@ -20,6 +18,25 @@ query {
 }
 </static-query>
 
+<script>
+export default {
+  data(){
+    return{
+      height: '90px'
+    }
+  },
+  computed:{
+    theme(){
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
+      
+    }
+  },
+  beforeMount(){
+    console.log(this.theme);
+  }
+}
+</script>
+
 <style>
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -27,6 +44,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  background-color: black;
+  color: white;
 }
 
 .layout {
@@ -48,3 +67,4 @@ body {
   margin-left: 20px;
 }
 </style>
+

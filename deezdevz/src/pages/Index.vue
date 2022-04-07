@@ -4,7 +4,7 @@
 
     <h1>Hello, welcome to {{ $static.metadata.siteName }}, we explain stuff with memes and code </h1>
     <hr>
-    <div class="post"
+    <div class=" "
       v-for="post in $page.posts.edges"
       :key="post.id"
       
@@ -48,7 +48,5 @@
 .home-links a {
   margin-right: 1rem;
 }
-.post{
-  background-color: aqua;
-}
+
 </style>
