@@ -10,13 +10,13 @@ export default {
   <Layout>
     
     <hr />
-    <div class="" v-for="post in $page.posts.edges" :key="post.id">
+    <div class=" " v-for="post in $page.posts.edges" :key="post.id">
       <PostPreview
         :title="post.node.title"
         :date="post.node.date"
         :path="post.node.path"
         :readingTime="post.node.readingTime"
-        :tags="post.node.tags"
+        :summary="post.node.summary"
       />
     </div>
   </Layout>
@@ -32,14 +32,14 @@ export default {
 
 <page-query>
   query{
-    posts: allPost{
+    posts: allPost(sortBy: "date", order: DESC ){
       edges{
         node{
           id
           title
           readingTime
           path
-          tags
+          summary
           date(format: "MMMM Do, YYYY")
         }
       }

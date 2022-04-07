@@ -1,6 +1,6 @@
 
 module.exports = {
-  siteName: 'DeezDevz',
+  siteName: 'CooDing',
   siteDescription: 'A blog about coding and memes',
   siteUrl: 'https://bruh.io',
   plugins: [{

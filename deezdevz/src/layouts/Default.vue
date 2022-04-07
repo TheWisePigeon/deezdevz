@@ -1,7 +1,7 @@
-<template  >
-  <div class="layout w-auto p-4 ">
-    <header class="flex justify-between ">
-      <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+<template class=" bg-slate-900" >
+  <div class="layout w-auto p-4 font-mono ">
+    <header class="flex justify-between py-6">
+      <g-link class=" text-3xl" to="/">{{ $static.metadata.siteName }}</g-link>
       <div>
         <button class=" bg-purple-500 rounded px-3">Switch</button>
       </div>
@@ -25,30 +25,39 @@ export default {
   },
   data(){
     return{
-      height: '90px'
+      
     }
   },
   computed:{
     theme(){
       return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
-      
     }
   },
-  beforeMount(){
-    console.log(this.theme);
+  mounted(){
+    if (this.theme==='Dark') {
+      document.body.classList.add('bg-slate-900')
+      document.body.classList.add('text-white')
+    }else{
+      document.body.classList.add('bg-white')
+      
+    }
+
+  },
+  methods:{
+    changeTheme(){
+      if (this.theme==='Dark') {
+        
+      }      
+    }
   }
 }
 </script>
 
 <style>
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  background-color: black;
-  color: white;
 }
 
 .layout {
@@ -64,6 +73,10 @@ body {
   align-items: center;
   margin-bottom: 20px;
   height: 80px;
+}
+
+.test{
+  background-color: slateblue;
 }
 
 .nav__link {

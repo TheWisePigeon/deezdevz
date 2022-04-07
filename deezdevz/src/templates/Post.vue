@@ -25,8 +25,7 @@ export default {
 		post: post(path: $path) {
 			id 
 			title
-			readingTime 
-			tags
+			readingTime
 			path 
 			date (format: "MMMM D, YYYY h:mma") 
 			content

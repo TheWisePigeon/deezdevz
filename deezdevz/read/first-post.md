@@ -1,8 +1,8 @@
 ---
 title: First Post
 date: 2020-01-01
-readingTime: 15
-tags: ' JavaScript Python Docker '
+readingTime: '☕ ☕ ☕ '
+summary: 'Just me talking about stuff'
 ---
 
 So this the very first post bruuuh
