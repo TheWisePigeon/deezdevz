@@ -52,12 +52,15 @@ query {
 <script>
 export default {
   metaInfo: {
-    titleTemplate: "DeezDevz - %s",
+    titleTemplate: "CooDing - %s",
   },
   data() {
     return {
       darkTheme: null,
     };
+  },
+  computed:{
+    
   },
   beforeMount() {
     if (
@@ -75,7 +78,15 @@ export default {
   methods: {
     changeTheme() {
       console.log(this.darkTheme);
-      this.darkTheme = !this.darkTheme
+      if (this.darkTheme) {
+        document.body.classList.remove("bg-slate-900");
+        document.body.classList.remove("text-white");
+        this.darkTheme = false;
+      } else {
+        document.body.classList.add("bg-slate-900");
+        document.body.classList.add("text-white");
+        this.darkTheme = true;
+      }
       console.log(this.darkTheme);
     },
   },
@@ -102,10 +113,6 @@ body {
   align-items: center;
   margin-bottom: 20px;
   height: 80px;
-}
-
-.test {
-  background-color: slateblue;
 }
 
 .nav__link {

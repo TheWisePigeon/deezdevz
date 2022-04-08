@@ -12,11 +12,13 @@ export default {
 
 <template>
 	<Layout>
+		<hr>
 		<header class="title">
 			<h1>{{ $page.post.title }}</h1>
 			<p>Published on: {{ $page.post.date }}</p>
 		</header>
-		<main class="content" v-html="$page.post.content"></main>
+		<hr class=" border-dotted">
+		<main class=" text-left" v-html="$page.post.content"></main>
 	</Layout>
 </template>
 
