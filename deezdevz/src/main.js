@@ -1,4 +1,3 @@
-
 import '../tailwindconfig/tailwind.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import PostPreview from '~/components/PostPreview.vue'

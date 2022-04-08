@@ -1,4 +1,3 @@
-
 module.exports = {
   siteName: 'CooDing',
   siteDescription: 'A blog about coding and memes',
@@ -12,5 +11,14 @@ module.exports = {
   }],
   templates: {
     Post: "/:title",
+  },
+  transformers: {
+    remark: {
+      autolinkClassName: 'icon icon-link heading-anchor',
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['noopener', ],
+      anchorClassName: 'icon icon-link',
+    }
+
   }
 }

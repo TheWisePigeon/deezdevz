@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: 'Post name',
+	
 	metaInfo(){
 		return{
 			title: this.$page.post.title,

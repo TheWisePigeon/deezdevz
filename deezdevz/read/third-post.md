@@ -5,9 +5,19 @@ readingTime: '☕ ☕ ☕ '
 summary: 'Just me talking about stuff but on another post'
 ---
 
-<h1> So today we will be talking about some pretty serious buiseness: NodeJS</h1>
-What is NodeJS? Well it's not a language, it/s not a framework either bla bla blaaaaaaaaa
 
-```py
-print('Bruh')
+#Hello World
+## This is a subheading
+### This is another subheading
+**This is bold text**
+(A link to [deezdevz](https://deezdevz.com))
+
+```js
+let x = 1;
+let y = 2;
 ```
+1. This is a list
+2. This is another list
+3. This is yet another list
+
+![random image](https://picsum.photos/200/300/?random)
