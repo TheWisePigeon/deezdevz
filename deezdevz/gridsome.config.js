@@ -1,7 +1,7 @@
 module.exports = {
-  siteName: 'CooDing',
+  siteName: 'PrograMemer',
   siteDescription: 'A blog about coding and memes',
-  siteUrl: 'https://bruh.io',
+  siteUrl: process.env.SITE_URL,
   plugins: [{
     use: "@gridsome/source-filesystem",
     options: {

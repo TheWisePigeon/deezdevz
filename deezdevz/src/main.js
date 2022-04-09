@@ -1,4 +1,5 @@
 import '../tailwindconfig/tailwind.css'
+import '../tailwindconfig/markdowm.css' 
 import DefaultLayout from '~/layouts/Default.vue'
 import PostPreview from '~/components/PostPreview.vue'
 import DarkTheme from '~/components/DarkMode.vue'

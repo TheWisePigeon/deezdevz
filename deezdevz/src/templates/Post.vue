@@ -18,7 +18,7 @@ export default {
 			<p>Published on: {{ $page.post.date }}</p>
 		</header>
 		<hr class=" border-dotted">
-		<main class=" text-left" v-html="$page.post.content"></main>
+		<main class="markdown-body text-left p-4" v-html="$page.post.content"></main>
 	</Layout>
 </template>
 

@@ -52,7 +52,7 @@ query {
 <script>
 export default {
   metaInfo: {
-    titleTemplate: "CooDing - %s",
+    titleTemplate: "PrograMemer - %s",
   },
   data() {
     return {

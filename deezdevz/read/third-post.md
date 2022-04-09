@@ -6,8 +6,8 @@ summary: 'Just me talking about stuff but on another post'
 ---
 
 
-#Hello World
-## # This is a subheading
+# Hello World
+##  This is a subheading
     some text
 ### This is another subheading
 **This is bold text**
