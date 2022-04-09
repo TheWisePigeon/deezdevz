@@ -17,8 +17,11 @@ summary: 'Just me talking about stuff but on another post'
 let x = 1;
 let y = 2;
 ```
-1. This is a list
-2. This is another list
-3. This is yet another list
+1 . This is a list
+2 .  This is another list
+3 . This is yet another list
+- This is a list
+- This is another list
+- This is yet another list
 
 ![random image](https://picsum.photos/200/300/?random)

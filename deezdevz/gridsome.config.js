@@ -13,12 +13,6 @@ module.exports = {
     Post: "/:title",
   },
   transformers: {
-    remark: {
-      autolinkClassName: 'icon icon-link heading-anchor',
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['noopener', ],
-      anchorClassName: 'icon icon-link',
-    }
 
   }
 }
