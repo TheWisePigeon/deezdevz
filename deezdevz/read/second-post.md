@@ -1,8 +1,0 @@
----
-title: Second Post
-date: 2020-01-02
-readingTime: '☕ ☕ ☕ '
-summary: 'Just me talking about stuff but on another post'
----
-
-Bruh this is just another random post y'all
